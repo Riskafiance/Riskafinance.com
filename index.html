@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska's Finance</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            height: 40px; /* Adjust height for logo */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f04c24; /* Orange hover effect */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('Image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #f04c24; /* Red text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .hero .border-box {
+            border: 3px solid white;
+            padding: 10px 40px;
+            display: inline-block;
+        }
+
+        .btn {
+            background-color: #f04c24;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #d43f1f;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #0d0c0c; /* Red color for text */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Press Coverage Section */
+        .press-coverage {
+            background-color: #b2302d; /* Dark red background */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .press-coverage h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px; /* Add space below heading */
+        }
+
+        .quote {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-style: italic;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 10px;
+        }
+
+        .author {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 15px; /* Add space between quote and author */
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #d43f1f; /* Red color for email link */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="AR Logo.png" alt="Riska's Finance">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="Your Financial Dashboard.html">Your Financial Dashboard</a>
+	    <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="border-box">
+            <h1>Riska's Finance</h1>
+        </div>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2W4poocyohabCbNSMgPDW-tkRiojH0lDxC6zRDgJRHOLnofgwfMM7_Po9ZSVKtASZtk7NXJw8k" target="_blank" class="btn">Schedule an Appointment</a>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="content">
+            <p>
+                Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs. 
+                Our goal is to build lasting relationships while helping you achieve your financial goals with confidence. 
+                Come visit us, and experience the difference personalized service can make!
+            </p>
+        </div>
+    </section>
+
+    <!-- Press Coverage Section -->
+    <section class="press-coverage">
+        <h2>Press Coverage</h2>
+        <div class="quote">
+            "Accounting is the most fundamental of the business professions. It’s a set of principles, 
+            and the accountant is responsible for making sure that those principles are applied 
+            consistently and accurately."
+        </div>
+        <div class="author">
+            Paul A. Samuelson, a Nobel Prize-winning economist
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
+        <p><strong>Phone:</strong> +1 (815) 677-5807</p>
+        <p><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></p>
+    </footer>
+</body>
+</html>

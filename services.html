@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Riska's Finance</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            height: 40px; /* Adjust height for logo */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f04c24; /* Orange hover effect */
+        }
+
+        /* Banner Section */
+        .banner-section {
+            margin-top: 60px; /* Adjust margin to account for fixed header */
+            position: relative;
+            text-align: center;
+        }
+
+        .banner-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-section h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 50px 20px; /* Adjust padding to account for fixed header */
+            background-color: white;
+        }
+
+        .services-section h1 {
+            font-size: 2.5rem;
+            color: #f04c24; /* Red text */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service h2 {
+            font-size: 1.8rem;
+            color: #d43f1f; /* Dark red text */
+            margin-bottom: 20px;
+        }
+
+        .service p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .service img {
+            max-width: 300px; /* Adjust the max-width to make the image smaller */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .service img + h2 {
+            margin-top: 20px; /* Add space between image and title */
+        }
+
+        .service img + p {
+            margin-top: 20px; /* Add space between image and paragraph */
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #d43f1f; /* Red color for email link */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="AR Logo.png" alt="Riska's Finance">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="Your Financial Dashboard.html">Your Financial Dashboard</a>
+	    <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <img src="C:/Users/amari/OneDrive/Desktop/Riskas_Finance_Website/Banner.jpg" alt="Banner">
+        <h1>Services Offered</h1>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        
+        <!-- Bookkeeping and Payroll Service -->
+        <div class="service">
+            <img src="C:/Users/amari/OneDrive/Desktop/Riskas_Finance_Website/Accounting.jpg" alt="Accounting">
+            <h2>Bookkeeping and Payroll</h2>
+            <p>
+                We save our business clients time and money by expertly managing Bookkeeping and Payroll. You didn't start your business to be buried in paperwork, but we did. Let us handle the numbers, keep your records organized and tax-ready, and ensure your employees (and you) are paid on time.
+            </p>
+        </div>
+
+        <!-- Tax Planning and Tax Preparation Service -->
+        <div class="service">
+            <img src="C:/Users/amari/OneDrive/Desktop/Riskas_Finance_Website/Tax.jpg" alt="Tax">
+            <h2>Tax Planning and Tax Preparation</h2>
+            <p>
+                We take the stress out of tax season with our comprehensive Tax Planning and Tax Preparation services. We work year-round to strategically minimize your tax liability and ensure you're fully prepared when it’s time to file. Let us handle the complexities of the tax code so you can focus on what you do best.
+            </p>
+        </div>
+
+        <!-- Building Your Financial Future Service -->
+        <div class="service">
+            <img src="C:/Users/amari/OneDrive/Desktop/Riskas_Finance_Website/Investing.png" alt="Investing">
+            <h2>Building Your Financial Future</h2>
+            <p>
+                At Riska's Finance, we make investing easy and stress-free. We help you create a plan that fits your financial goals, whether it's growing your wealth or saving for retirement. Our team handles the details, so you can focus on your future with confidence. Let us guide you in making smart investment choices.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
+        <p><strong>Phone:</strong> +1 (815) 677-5807</p>
+        <p><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Riska's Finance</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            height: 40px; /* Adjust height for logo */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f04c24; /* Orange hover effect */
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 20px 50px; /* Adjust padding to account for fixed header */
+            text-align: center;
+            background-color: white;
+        }
+
+        .contact-section h1 {
+            font-size: 2.5rem;
+            color: #f04c24; /* Red text */
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-info div {
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: #f04c24;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form div {
+            margin-bottom: 15px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #f04c24;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #d43f1f;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #d43f1f; /* Red color for email link */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="AR Logo.png" alt="Riska's Finance">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="Your Financial Dashboard.html">Your Financial Dashboard</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</div>
+            <div><strong>Phone:</strong> <a href="tel:+18156775807">+1 (815) 677-5807</a></div>
+            <div><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></div>
+            <div><strong>Business Hours:</strong> Mon-Fri, 9 AM - 5 PM</div>
+        </div>
+        <div class="contact-form">
+            <form action="send-email.php" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
+        <p><strong>Phone:</strong> +1 (815) 677-5807</p>
+        <p><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></p>
+    </footer>
+</body>
+</html>
