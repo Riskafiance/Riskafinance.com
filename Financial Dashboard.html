@@ -32,73 +32,74 @@
         }
 
         header .logo img {
-            height: 40px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
+            height: 40px; /* Adjust height for logo */
         }
 
         nav a {
             text-decoration: none;
             color: #333;
+            margin-left: 20px;
             font-weight: bold;
         }
 
         nav a:hover {
-            color: #f04c24;
+            color: #f04c24; /* Orange hover effect */
         }
 
         /* Dashboard Section */
         .dashboard-section {
-            padding: 100px 20px 50px;
+            padding: 100px 20px 50px; /* Adjust padding to account for fixed header */
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: flex-start;
             background-color: white;
         }
 
-        .dashboard-section div {
-            flex: 1 1 100%;
+        .dashboard-section div:first-child {
+            flex: 1;
+            margin-right: 20px; /* Add space to the right of the text */
         }
 
         .dashboard-section h1 {
-            font-size: 2rem;
-            color: #f04c24;
-            text-align: center;
+            font-size: 2.5rem;
+            color: #f04c24; /* Red text */
             margin-bottom: 20px;
+            text-align: center; /* Center the title */
         }
 
         .dashboard-section p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            text-align: justify;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 30px; /* Add space below the paragraph */
         }
 
         .dashboard-section img {
-            max-width: 100%;
+            max-width: 300px; /* Adjust the max-width to make the image smaller */
             height: auto;
-            margin: 0 auto 20px;
-            display: block;
+            margin-bottom: 30px; /* Add space below the image */
+        }
+
+        .iframe-container {
+            flex: 2; /* Adjust flex value to make the window smaller */
+            margin-left: 20px;
         }
 
         .iframe-container iframe {
             width: 100%;
-            height: 300px;
+            height: 500px; /* Keep the height the same */
+            border: none;
         }
 
         .dashboard-section a {
-            display: block;
-            text-align: center;
+            display: inline-block;
             padding: 10px 20px;
             background-color: #f04c24;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1rem;
-            margin-top: 10px;
+            margin-top: 20px; /* Add space above the button */
+            font-size: 1.2rem;
         }
 
         .dashboard-section a:hover {
@@ -108,49 +109,24 @@
         /* Footer Section */
         .footer {
             background-color: #333;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: 15px 10px;
+            padding: 20px 10px;
         }
 
         .footer p {
             margin: 5px 0;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
         .footer a {
-            color: #f04c24;
+            color: #d43f1f; /* Red color for email link */
             text-decoration: none;
         }
 
         .footer a:hover {
             text-decoration: underline;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            header {
-                flex-wrap: wrap;
-                padding: 10px;
-            }
-
-            .dashboard-section {
-                flex-direction: column;
-            }
-
-            .iframe-container iframe {
-                height: 200px;
-            }
-
-            .footer p {
-                font-size: 0.8rem;
-            }
         }
     </style>
 </head>
@@ -164,7 +140,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="Financial Dashboard.html">Financial Dashboard</a>
-            <a href="contact.html">Contact Us</a>
+	    <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
