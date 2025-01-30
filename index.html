@@ -10,12 +10,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
 
         body {
+            font-family: Arial, sans-serif;
             color: #333;
-            background-color: #f8f9fa;
         }
 
         /* Header */
@@ -23,9 +22,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -33,19 +32,18 @@
         }
 
         header .logo img {
-            height: 50px;
+            height: 40px; /* Adjust height for logo */
         }
 
         nav a {
             text-decoration: none;
             color: #333;
-            margin-left: 25px;
-            font-weight: 600;
-            transition: color 0.3s;
+            margin-left: 20px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #f04c24;
+            color: #f04c24; /* Orange hover effect */
         }
 
         /* Hero Section */
@@ -53,101 +51,104 @@
             height: 100vh;
             background: url('Image.jpg') no-repeat center center/cover;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            position: relative;
             text-align: center;
             color: white;
-            position: relative;
-            padding: 20px;
         }
 
         .hero h1 {
             font-size: 4rem;
-            color: #fff;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            color: #f04c24; /* Red text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
         }
 
         .hero .border-box {
-            border: 4px solid rgba(255, 255, 255, 0.8);
-            padding: 15px 50px;
+            border: 3px solid white;
+            padding: 10px 40px;
             display: inline-block;
-            border-radius: 10px;
         }
 
         .btn {
-            background: linear-gradient(135deg, #f04c24, #d43f1f);
+            background-color: #f04c24;
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 5px;
             font-size: 1.2rem;
             margin-top: 20px;
             display: inline-block;
-            transition: 0.3s;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            background: #c0392b;
+            background-color: #d43f1f;
         }
 
         /* Welcome Section */
         .welcome-section {
             background-color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .welcome-section p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #555;
-            max-width: 900px;
+            color: #0d0c0c; /* Red color for text */
+            max-width: 800px;
             margin: 0 auto;
         }
 
         /* Press Coverage Section */
         .press-coverage {
-            background: #b2302d;
+            background-color: #b2302d; /* Dark red background */
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         .press-coverage h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             text-transform: uppercase;
+            margin-bottom: 20px; /* Add space below heading */
         }
 
         .quote {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
             font-style: italic;
-            margin: 20px auto;
+            margin: 0 auto;
             max-width: 800px;
-            padding: 0 15px;
+            padding: 0 10px;
         }
 
         .author {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
-            margin-top: 15px;
+            margin-top: 15px; /* Add space between quote and author */
         }
 
-        /* Footer */
+        /* Footer Section */
         .footer {
-            background-color: #222;
+            background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 25px 15px;
+            padding: 20px 10px;
+        }
+
+        .footer p {
+            margin: 5px 0;
             font-size: 1rem;
+            line-height: 1.5;
         }
 
         .footer a {
-            color: #f04c24;
+            color: #d43f1f; /* Red color for email link */
             text-decoration: none;
-            font-weight: bold;
         }
 
         .footer a:hover {
@@ -165,7 +166,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="Financial Dashboard.html">Financial Dashboard</a>
-            <a href="contact.html">Contact Us</a>
+	    <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
@@ -179,11 +180,13 @@
 
     <!-- Welcome Section -->
     <section class="welcome-section">
-        <p>
-            Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs. 
-            Our goal is to build lasting relationships while helping you achieve your financial goals with confidence. 
-            Come visit us and experience the difference personalized service can make!
-        </p>
+        <div class="content">
+            <p>
+                Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs. 
+                Our goal is to build lasting relationships while helping you achieve your financial goals with confidence. 
+                Come visit us, and experience the difference personalized service can make!
+            </p>
+        </div>
     </section>
 
     <!-- Press Coverage Section -->
@@ -195,11 +198,11 @@
             consistently and accurately."
         </div>
         <div class="author">
-            - Paul A. Samuelson, Nobel Prize-winning economist
+            Paul A. Samuelson, a Nobel Prize-winning economist
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer">
         <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
         <p><strong>Phone:</strong> +1 (815) 677-5807</p>
