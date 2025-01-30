@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riska's Finance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -13,8 +14,9 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #333;
+            background-color: #f4f4f4;
         }
 
         /* Header */
@@ -22,8 +24,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            background-color: white;
+            padding: 20px 40px;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
@@ -32,18 +34,19 @@
         }
 
         header .logo img {
-            height: 40px; /* Adjust height for logo */
+            height: 50px;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
-            margin-left: 20px;
+            margin-left: 30px;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #f04c24; /* Orange hover effect */
+            color: #f04c24;
         }
 
         /* Hero Section */
@@ -54,14 +57,14 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            position: relative;
             text-align: center;
             color: white;
+            position: relative;
         }
 
         .hero h1 {
             font-size: 4rem;
-            color: #f04c24; /* Red text */
+            color: #f04c24;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             margin-bottom: 20px;
         }
@@ -76,11 +79,12 @@
             background-color: #f04c24;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border-radius: 5px;
             font-size: 1.2rem;
             margin-top: 20px;
             display: inline-block;
+            transition: background-color 0.3s;
         }
 
         .btn:hover {
@@ -90,31 +94,31 @@
         /* Welcome Section */
         .welcome-section {
             background-color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .welcome-section p {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #0d0c0c; /* Red color for text */
+            color: #333;
             max-width: 800px;
             margin: 0 auto;
         }
 
         /* Press Coverage Section */
         .press-coverage {
-            background-color: #b2302d; /* Dark red background */
+            background-color: #b2302d;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .press-coverage h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 20px; /* Add space below heading */
+            margin-bottom: 20px;
         }
 
         .quote {
@@ -129,7 +133,7 @@
         .author {
             font-size: 1rem;
             font-weight: bold;
-            margin-top: 15px; /* Add space between quote and author */
+            margin-top: 15px;
         }
 
         /* Footer Section */
@@ -137,7 +141,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 10px;
+            padding: 30px 10px;
         }
 
         .footer p {
@@ -147,8 +151,9 @@
         }
 
         .footer a {
-            color: #d43f1f; /* Red color for email link */
+            color: #d43f1f;
             text-decoration: none;
+            transition: text-decoration 0.3s;
         }
 
         .footer a:hover {
@@ -166,7 +171,7 @@
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="Financial Dashboard.html">Financial Dashboard</a>
-	    <a href="contact.html">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
