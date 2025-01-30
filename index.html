@@ -29,34 +29,64 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 20px;
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.3s ease;
         }
 
-        header.scrolled {
-            background-color: rgba(255, 255, 255, 0.9);
+        .logo img {
+            height: 40px;
         }
 
-        header .logo img {
-            height: 50px; /* Larger logo */
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 15px;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
             color: #333;
-            margin-left: 25px;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #f04c24; /* Orange hover effect */
+        .nav-links a:hover {
+            color: #f04c24;
+        }
+
+        /* Mobile Menu */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
         }
 
         /* Hero Section */
@@ -69,108 +99,66 @@
             flex-direction: column;
             text-align: center;
             color: white;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            padding: 20px;
         }
 
         .hero h1 {
-            font-size: 5rem;
-            color: #fff; /* White text */
+            font-size: 3rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            margin-bottom: 20px;
-            animation: slideUp 1.5s ease-in-out;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .hero .border-box {
-            border: 3px solid white;
-            padding: 15px 50px;
-            display: inline-block;
-            animation: fadeIn 2.5s ease-in-out;
+            margin-bottom: 15px;
         }
 
         .btn {
             background-color: #f04c24;
             color: white;
             text-decoration: none;
-            padding: 12px 30px;
+            padding: 12px 20px;
             border-radius: 5px;
             font-size: 1.2rem;
-            margin-top: 30px;
-            display: inline-block;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .btn:hover {
             background-color: #d43f1f;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
-        /* Welcome Section */
-        .welcome-section {
-            background-color: #f9f9f9;
-            padding: 80px 20px;
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 10px 18px;
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .welcome-section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
+        .section p {
+            font-size: 1.1rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: auto;
         }
 
-        /* Press Coverage Section */
+        /* Press Coverage */
         .press-coverage {
             background: linear-gradient(135deg, #b2302d, #f04c24);
             color: white;
-            text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
         }
 
-        .press-coverage h2 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
-
-        .quote {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            font-style: italic;
-            margin: 0 auto;
-            max-width: 800px;
-            padding: 0 10px;
-        }
-
-        .author {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Footer Section */
+        /* Footer */
         .footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 40px 10px;
-        }
-
-        .footer p {
-            margin: 10px 0;
-            font-size: 1rem;
-            line-height: 1.5;
+            padding: 20px;
         }
 
         .footer a {
@@ -181,101 +169,56 @@
 
         .footer a:hover {
             color: #d43f1f;
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                padding: 15px 20px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-
-            .welcome-section p {
-                font-size: 1rem;
-            }
-
-            .press-coverage h2 {
-                font-size: 1.8rem;
-            }
-
-            .quote {
-                font-size: 1.1rem;
-            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header id="header">
+    <header>
         <div class="logo">
             <img src="AR Logo.png" alt="Riska's Finance">
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="Financial Dashboard.html">Financial Dashboard</a>
-            <a href="contact.html">Contact Us</a>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="Financial Dashboard.html">Dashboard</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="border-box">
-            <h1>Riska's Finance</h1>
-        </div>
+        <h1>Riska's Finance</h1>
         <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2W4poocyohabCbNSMgPDW-tkRiojH0lDxC6zRDgJRHOLnofgwfMM7_Po9ZSVKtASZtk7NXJw8k" target="_blank" class="btn">Schedule an Appointment</a>
     </section>
 
     <!-- Welcome Section -->
-    <section class="welcome-section">
-        <div class="content">
-            <p>
-                Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs. 
-                Our goal is to build lasting relationships while helping you achieve your financial goals with confidence. 
-                Come visit us, and experience the difference personalized service can make!
-            </p>
-        </div>
+    <section class="section">
+        <p>Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs.</p>
     </section>
 
     <!-- Press Coverage Section -->
     <section class="press-coverage">
         <h2>Press Coverage</h2>
-        <div class="quote">
-            "Accounting is the most fundamental of the business professions. It’s a set of principles, 
-            and the accountant is responsible for making sure that those principles are applied 
-            consistently and accurately."
-        </div>
-        <div class="author">
-            Paul A. Samuelson, a Nobel Prize-winning economist
-        </div>
+        <p>"Accounting is the most fundamental of the business professions. The accountant is responsible for making sure that principles are applied accurately."</p>
+        <p><strong>— Paul A. Samuelson, Nobel Prize-winning economist</strong></p>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
         <p><strong>Phone:</strong> +1 (815) 677-5807</p>
         <p><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></p>
     </footer>
 
-    <!-- JavaScript for Header Scroll Effect -->
+    <!-- JavaScript for Mobile Menu -->
     <script>
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
     </script>
 </body>
 </html>
