@@ -47,7 +47,11 @@
             height: 50px; /* Larger logo */
         }
 
-        nav a {
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
             text-decoration: none;
             color: #333;
             margin-left: 25px;
@@ -55,160 +59,49 @@
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #f04c24; /* Orange hover effect */
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Image.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            color: white;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .hero h1 {
-            font-size: 5rem;
-            color: #fff; /* White text */
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            margin-bottom: 20px;
-            animation: slideUp 1.5s ease-in-out;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .hero .border-box {
-            border: 3px solid white;
-            padding: 15px 50px;
-            display: inline-block;
-            animation: fadeIn 2.5s ease-in-out;
-        }
-
-        .btn {
-            background-color: #f04c24;
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            margin-top: 30px;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #d43f1f;
-            transform: translateY(-5px);
-        }
-
-        /* Welcome Section */
-        .welcome-section {
-            background-color: #f9f9f9;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .welcome-section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Press Coverage Section */
-        .press-coverage {
-            background: linear-gradient(135deg, #b2302d, #f04c24);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .press-coverage h2 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
-
-        .quote {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            font-style: italic;
-            margin: 0 auto;
-            max-width: 800px;
-            padding: 0 10px;
-        }
-
-        .author {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Footer Section */
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 40px 10px;
-        }
-
-        .footer p {
-            margin: 10px 0;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .footer a {
+        .nav-links a:hover {
             color: #f04c24;
-            text-decoration: none;
-            transition: color 0.3s ease;
         }
 
-        .footer a:hover {
-            color: #d43f1f;
-            text-decoration: underline;
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
         }
 
-        /* Responsive Design */
+        .menu-toggle div {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
         @media (max-width: 768px) {
-            header {
-                padding: 15px 20px;
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-            .hero h1 {
-                font-size: 3rem;
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+                display: block;
+                width: 100%;
             }
 
-            .btn {
-                padding: 10px 20px;
-                font-size: 1rem;
+            .menu-toggle {
+                display: flex;
             }
 
-            .welcome-section p {
-                font-size: 1rem;
-            }
-
-            .press-coverage h2 {
-                font-size: 1.8rem;
-            }
-
-            .quote {
-                font-size: 1.1rem;
+            .nav-links.active {
+                display: flex;
             }
         }
     </style>
@@ -219,7 +112,12 @@
         <div class="logo">
             <img src="AR Logo.png" alt="Riska's Finance">
         </div>
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="Financial Dashboard.html">Dashboard</a>
@@ -227,55 +125,12 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="border-box">
-            <h1>Riska's Finance</h1>
-        </div>
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2W4poocyohabCbNSMgPDW-tkRiojH0lDxC6zRDgJRHOLnofgwfMM7_Po9ZSVKtASZtk7NXJw8k" target="_blank" class="btn">Schedule an Appointment</a>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="welcome-section">
-        <div class="content">
-            <p>
-                Welcome to <strong>Riska's Finance</strong>! We provide personalized Accounting, Bookkeeping, Business & Individual Tax Services, and Payroll Services tailored to your needs. 
-                Our goal is to build lasting relationships while helping you achieve your financial goals with confidence. 
-                Come visit us, and experience the difference personalized service can make!
-            </p>
-        </div>
-    </section>
-
-    <!-- Press Coverage Section -->
-    <section class="press-coverage">
-        <h2>Press Coverage</h2>
-        <div class="quote">
-            "Accounting is the most fundamental of the business professions. It’s a set of principles, 
-            and the accountant is responsible for making sure that those principles are applied 
-            consistently and accurately."
-        </div>
-        <div class="author">
-            Paul A. Samuelson, a Nobel Prize-winning economist
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p><strong>Address:</strong> 614 Crawford Ave, Dixon IL, 61021</p>
-        <p><strong>Phone:</strong> +1 (815) 677-5807</p>
-        <p><strong>Email:</strong> <a href="mailto:Riskas.finances@gmail.com">Riskas.finances@gmail.com</a></p>
-    </footer>
-
-    <!-- JavaScript for Header Scroll Effect -->
+    <!-- JavaScript for Responsive Menu -->
     <script>
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
